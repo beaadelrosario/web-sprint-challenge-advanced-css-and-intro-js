@@ -242,21 +242,19 @@ function getArtistByIndex(array, index) {
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
-console.log ('unsure about task 4');
-/*
+console.log ('TASK 4');
 
-UNSURE:
-function get20s(artists){
+function get20s(artArray){
+  let newarr = [];
+  for (let i = 0; i < artArray.length; i++) {
+    if(artArray[i] >= 1900 && artArray[i] <= 2000){
+      newarr.push(artArray[i]);
+    }
+  }  
+  return newarr;
+}
 
-const getNewArr = [];
-for (i = 0; i <= artists["years"].length; i++) {
-  // console.log(places[i].region);
-  if(artists["years"].["years"] == "1900-2000") {
-    getNewArr.push(artists["years"]."names"]);
-  }
-}
-}
-*/
+console.log (get20s(artists));
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -275,9 +273,8 @@ function removeArtist(arr, num) {
   }
   console.log (removeArtist(artists,0));
 
-  
-  /**
 
+  /**
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -291,8 +288,9 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
 
 At the end, this function should console.log() the new array with information added"*/
+console.log ('TASK 6');
 
-function addArtist(/* Code here */){
+function addArtist([/* Code here */]){
 
     /* Code here */
 
@@ -306,12 +304,19 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(ogArtistArr){
+console.log ('TASK 7');
 
-  /* Code here */
+function lotsOfArt(array){
+  let arr100names = [];
 
+ for (let i = 0; i < array.length; i++) {
+   if (array["paintings"] < 100) {
+     return array
+   }
+ }
+ return
 }
-
+console.log (lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
