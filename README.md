@@ -23,9 +23,20 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe acessibility on the web to someone new to programming?
+
+    BEA: Acessibility on the web is a inclusive practice that ensures that there are no barriers that would prevent any user from interating with your website or application. Basically, you can think of screen readers, motor assitance but this also includes everyone such as the use of mobile devices. 
+
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+    BEA: There are a number of things you can do to ensure your website is acceisble. First and foremost, accesibility should never be an afterthought. Not only is it a human right but good usuability is good accesibility. Another way you can ensure your website is acessible is to use semantic elements in your HTM. This provides defaults or shortcuts to a more usuale and acessible web because it gives context to screen readers. Additionally but not limited to, you should use real text over graphics. Alt text is the written copy that appears in place of an image on a webpage if your image fails to load on a user's screen. In addition to compressing your images incase the user has a slow internet connection, the alt text helps screen-reading tools describe your images to visually impaired readers and allows search engines to better crawl and rank your website.
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+    BEA: A variable is a way to store, change and use data in code. For example, consider Instagram. More than likely, there are lots of changing pieces on Instagram such as "likes" and username. Every one of those changing parts of data is stored in a variable. 
+
 4. What is the purpose of using functions in code?
+
+    BEA: Functions allows the developer to repeat sections of code with just a single line of code. You can think of functions as small computer programs. It is code that you can use over and over again while keeping your code D.R.Y.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -36,10 +47,10 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Follow these steps to set up your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your Team Lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add your Team Lead as collaborator on Github.
+- [X] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
 
 ### Task 2a:  Minimum Viable Product - Responsive Design
 
