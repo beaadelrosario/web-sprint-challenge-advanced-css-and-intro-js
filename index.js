@@ -200,7 +200,6 @@ const artists = [
       "paintings": 328
     }
 ]
-console.log ('test');
 
 // 🖌🖼 M V P 🖼🖌 //
 
@@ -208,14 +207,19 @@ console.log ('test');
 
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
+console.log ('TASK 1:A');
 
-console.log (artists[0]); /*part 1 answer*/
+  console.log (artists[0]); /*part 1 answer*/
 
-console.log(artists[2]);
+console.log ('TASK 1:B');
+
+  console.log(artists[2]["bio"]);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
+console.log ('TASK 2 - WORKS remove code below startinga Task 3');
 
-artists.splice
+  artists[8]["name"]= "Vincent Van Gogh"
+  console.log(artists);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -224,22 +228,35 @@ artists.splice
  * 
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0, (artists,0)
  * it will return `The artist at index 0 is Amedeo Modigliani`.
+ * 
+ * 
 */
+
+console.log ('TASK 3');
 function getArtistByIndex(array, index) {
-    return `The artist at index ${this.id} is ${this.name}.`
+    return 'The artist at index '+ (array[index]["id"]) + ' is ' + (array[index]["name"]) +'.';
   }
   console.log (getArtistByIndex(artists,0));
+
   /**
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
+console.log ('unsure about task 4');
+/*
 
-function get20s(/* Code here */){
+UNSURE:
+function get20s(artists){
 
-  /* Code here */
-
+const getNewArr = [];
+for (i = 0; i <= artists["years"].length; i++) {
+  // console.log(places[i].region);
+  if(artists["years"].["years"] == "1900-2000") {
+    getNewArr.push(artists["years"]."names"]);
+  }
 }
-
+}
+*/
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -251,12 +268,15 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+console.log ('TASK 5');
+
+function removeArtist(arr, num) {
+    return arr.splice (num,1)
   }
+  console.log (removeArtist(artists,0));
+
   
   /**
-
 
 
 
@@ -286,7 +306,7 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(ogArtistArr){
 
   /* Code here */
 
