@@ -209,16 +209,16 @@ const artists = [
 (2) Bio of the third artist (2nd index) in the array */
 console.log ('TASK 1:A');
 
-  console.log (artists[0]); /*part 1 answer*/
+  console.log (artists[0]["name"]); /*part 1 answer*/
 
 console.log ('TASK 1:B');
 
   console.log(artists[2]["bio"]);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-console.log ('TASK 2 - WORKS remove code below startinga Task 3');
+console.log ('TASK 2 - WORKS remove code below starting Task 3');
 
-  artists[8]["name"]= "Vincent Van Gogh"
+  artists[8]["name"] = "Vincent Van Gogh"
   console.log(artists);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
@@ -233,25 +233,42 @@ console.log ('TASK 2 - WORKS remove code below startinga Task 3');
 */
 
 console.log ('TASK 3');
+
 function getArtistByIndex(array, index) {
-    return 'The artist at index '+ (array[index]["id"]) + ' is ' + (array[index]["name"]) +'.';
-  }
-  console.log (getArtistByIndex(artists,0));
+  return 'The artist at index '+ (array[index]["id"]) + ' is ' + (array[index]["name"]) +'.';
+}
+console.log (getArtistByIndex(artists,0));
 
   /**
 
 
-/* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
+/* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) 
+  {
+      "id": 2,
+      "name": "Diego Rivera",
+      "years": "1886 - 1957",
+      "genre": "Social Realism,Muralism",
+      "nationality": "Mexican",
+      "bio": "Diego María de la Concepción Juan Nepomuceno Estanislao de la Rivera y Barrientos Acosta y Rodríguez, known as Diego Rivera (Spanish pronunciation: [ˈdjeɣo riˈβeɾa]; December 8, 1886 – November 24, 1957) was a prominent Mexican painter. His large frescoes helped establish the Mexican mural movement in Mexican art. Between 1922 and 1953, Rivera painted murals in, among other places, Mexico City, Chapingo, Cuernavaca, San Francisco, Detroit, and New York City. In 1931, a retrospective exhibition of his works was held at the Museum of Modern Art in New York. Rivera had a volatile marriage with fellow Mexican artist Frida Kahlo.",
+      "wikipedia": "http://en.wikipedia.org/wiki/Diego_Rivera",
+      "paintings": 70
+    },
+
+*/
 console.log ('TASK 4');
 
 function get20s(artArray){
-  let newarr = [];
+  let arr = [];
+  let art = [];
+  
   for (let i = 0; i < artArray.length; i++) {
-    if(artArray[i] >= 1900 && artArray[i] <= 2000){
-      newarr.push(artArray[i]);
+    arr = artArray[i].years.split(" ");
+    if (Number(arr[0]) > 1900 && Number(arr[0]) < 2000 || Number(arr[2]) > 1900 && Number(arr[2]) < 2000) {
+      art.push(artArray[i].name);
     }
-  }  
-  return newarr;
+    
+  }
+  return art;
 }
 
 console.log (get20s(artists));
@@ -265,19 +282,27 @@ console.log (get20s(artists));
  * it will remove Amedeo Modigliani from our dataset and log the number 19. 
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
-*/
-console.log ('TASK 5');
 
-function removeArtist(arr, num) {
+ function removeArtist(arr, num) {
     return arr.splice (num,1)
   }
   console.log (removeArtist(artists,0));
+
+ */
+
+console.log ('TASK 5');
+
+function removeArtist(arr, num) {
+  arr.splice(num,1);
+  console.log(arr.length);
+}
 
 
   /**
 
 
-/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
+/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. 
+Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
 
 For example, you could add the following information: 
 id: 21
@@ -288,35 +313,46 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
 
 At the end, this function should console.log() the new array with information added"*/
-console.log ('TASK 6');
+console.log ('TASK 6 - didnt use a function but...');
 
-function addArtist([/* Code here */]){
+artists [20] = {
+  id: 21,
+  name: "Bea", 
+  years: "1990 - 2020",
+  genre: "Web Design", 
+  nationality: "Filipino-American",
+  bio: "Bea is the greatest artist that ever lived. She's not sorry!",
+}
 
-    /* Code here */
+console.log (artists);
 
-  }
 
+function addArtist(num, name, years, genre, nationality, bio){
+  artists.push({num, name, years, genre, nationality, bio});
+  console.log(artists);
+}
+addArtist(21, "Bea", "1997", "web", "fili", "Thier greeeeat");
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
 
 and returns an array with names of artists who painted more than 100 paintings.
 
-For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
+For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]
+
+*/
 
 console.log ('TASK 7');
-
-function lotsOfArt(array){
-  let arr100names = [];
-
- for (let i = 0; i < array.length; i++) {
-   if (array["paintings"] < 100) {
-     return array
-   }
- }
- return
+function lotsOfArt(array) {
+  let newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].paintings > 100){
+      newArr.push(array[i].name);
+    }
+  }
+  return newArr;
 }
-console.log (lotsOfArt(artists));
+console.log(lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
