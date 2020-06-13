@@ -313,25 +313,15 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
 
 At the end, this function should console.log() the new array with information added"*/
-console.log ('TASK 6 - didnt use a function but...');
+console.log ('TASK 6');
 
-artists [20] = {
-  id: 21,
-  name: "Bea", 
-  years: "1990 - 2020",
-  genre: "Web Design", 
-  nationality: "Filipino-American",
-  bio: "Bea is the greatest artist that ever lived. She's not sorry!",
-}
-
-console.log (artists);
 
 
 function addArtist(num, name, years, genre, nationality, bio){
   artists.push({num, name, years, genre, nationality, bio});
   console.log(artists);
 }
-addArtist(21, "Bea", "1997", "web", "fili", "Thier greeeeat");
+addArtist(21, "Bea", "1990-present", "Web Design", "Filipino-American", "Bea is the greatest artist that ever lived. She's not sorry!");
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
@@ -379,7 +369,6 @@ The function should console.log 50 chunks of HTML code that match the structure 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
 function getHTML(arr){
-
 
 
 }
